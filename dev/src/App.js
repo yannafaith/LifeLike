@@ -18,5 +18,9 @@ export default App;
 -- react-dom 
 -- react-router-dom for { Route, BrowserRouter, Link } 
 -- styled-components for styled
+-- react-redux for { connect, Provider }
+-- redux-logger for logger
+-- redux-thunk for thunk
+-- redux for { createStore, applyMiddleware }
 
 */
