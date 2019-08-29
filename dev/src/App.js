@@ -1,5 +1,5 @@
 import React from 'react';
-import Finances from './pages/Finances.jsx';
+import Finances from './pages/Finances/Finances.js'
 import './App.css';
 
 const App = () => {
