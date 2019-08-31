@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const billsContainer = styled.div`{}`
+
+
 
 const Finances = () => {
 
-    const [ projlen ] = useState( 2 );
-    const [ projBalance ] = useState( 6400 );
+    const [ projlen ] = useState( 3 );
+    // const [ projBalance ] = useState( 5900 + 500 );
+    const [ projBalance ] = useState( 11000 );
     const [ bills, setBills ] = useState( [
         { 
             'name': 'heroku',
@@ -57,7 +63,17 @@ const Finances = () => {
         },
         { 
             'name': 'Airbnb',
-            'value' : 2560,
+            'value' : 4600,
+            'type': 'sing'
+        },
+        { 
+            'name': 'Laptop',
+            'value' : 630,
+            'type': 'sing'
+        },
+        { 
+            'name': 'Eye',
+            'value' : 640,
             'type': 'sing'
         },
     ]);
@@ -94,13 +110,26 @@ const Finances = () => {
         <div>
             <h1> Finances </h1>
             <h3> Your balance used for projections is ${ projBalance } </h3>
-            <h2> Recurring Bills </h2> 
 
-            {
-                bills.map( ( bill, idx ) => {
-                    return <p key = { idx }> { bill.name } = ${ bill.value } </p>
-                })
-            }
+            <div>
+                <h2> Recurring Bills </h2> 
+                {
+                    recurrings.map( ( bill, idx ) => {
+                        return <p key = { idx }> { bill.name } = ${ bill.value } </p>
+                    })
+                }
+            </div>
+
+
+            <div>
+                <h2> Single Bills </h2> 
+                {
+                    singles.map( ( bill, idx ) => {
+                        return <p key = { idx }> { bill.name } = ${ bill.value } </p>
+                    })
+                }
+            </div>
+
 
             <form onSubmit={ addBill }>
                 <input 
