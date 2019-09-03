@@ -132,4 +132,6 @@ const Finances = () => {
 
 export default Finances;
 
-// bug, single purchases get counted as monthly purchases as well. 
+// bug, single purchases get counted as monthly purchases as well.  
+
+// test commit
