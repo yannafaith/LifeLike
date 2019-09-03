@@ -9,7 +9,7 @@ const Finances = () => {
 
     const [ projlen ] = useState( 3 );
     // const [ projBalance ] = useState( 5900 + 500 );
-    const [ projBalance ] = useState( 11000 );
+    const [ projBalance ] = useState( 11000 + 1000 );
     const [ bills, setBills ] = useState( [
         { 
             'name': 'heroku',
@@ -58,12 +58,12 @@ const Finances = () => {
         },
         { 
             'name': 'food',
-            'value' : 33 * 15,
+            'value' : 15 * 30,
             'type': 'rec'
         },
         { 
             'name': 'Airbnb',
-            'value' : 4600,
+            'value' : 362 + 1560 + 2560,
             'type': 'sing'
         },
         { 
@@ -74,6 +74,16 @@ const Finances = () => {
         { 
             'name': 'Eye',
             'value' : 640,
+            'type': 'sing'
+        },
+        { 
+            'name': 'Plane Tickets',
+            'value' : 400,
+            'type': 'sing'
+        },
+        { 
+            'name': 'Misc?',
+            'value' : 1023,
             'type': 'sing'
         },
     ]);
