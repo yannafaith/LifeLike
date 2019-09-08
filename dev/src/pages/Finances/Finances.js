@@ -58,7 +58,7 @@ const Finances = () => {
         },
         { 
             'name': 'food',
-            'value' : 15 * 30,
+            'value' : 75,
             'type': 'rec'
         },
         { 
@@ -83,7 +83,7 @@ const Finances = () => {
         },
         { 
             'name': 'Misc?',
-            'value' : 1023,
+            'value' : 1523,
             'type': 'sing'
         },
     ]);
@@ -107,7 +107,7 @@ const Finances = () => {
 
     let [ monthlyDebt, setMonthlyDebt ] = useState( defaultMonthly );
 
-    let remBalance = projBalance - ( monthlyDebt * projlen ) - defaultSingle;
+    let remBalance = projBalance - 875 - ( monthlyDebt * 2 ) - defaultSingle;
 
     const addBill = ( e ) => {
         e.preventDefault();
@@ -164,6 +164,8 @@ const Finances = () => {
 
             <h2> Total monthly debit = ${ monthlyDebt } </h2>
             <h2> Total single purchases debit = ${ defaultSingle } </h2>
+            <h2> Balance now = ${ 6000 } </h2>
+            <h2> Balance now = ${ 6010 - 2560 - 1050 } </h2>
             <h2> Remaining balance = ${ remBalance } </h2>
         </div>
     );
