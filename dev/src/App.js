@@ -1,5 +1,4 @@
 import React from 'react';
-import Finances from './pages/Finances/Finances.js';
 import Home from './pages/Home/Home.js';
 import './App.css';
 
